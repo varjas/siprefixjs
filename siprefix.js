@@ -63,7 +63,7 @@ function scale(value, combined) {
 	}
 
 	// Scale number by order of magnitude determined
-	value = value / 10 ** order;
+	value = Math.pow(value / 10, order);
 
 	// Attempt to get prefix from order
 	var prefix = siConvert(order);
@@ -96,7 +96,7 @@ function expand(value) {
 	value = Number(value);
 
 	// Scale value by order of magnitude determined
-	value = value * 10 ** order;
+	value = Math.pow(value * 10, order);
 
 	return value;
 }
