@@ -1,10 +1,6 @@
 // Return prefix or scale based on one input
 // Only handles prefixes separated by 3 orders of magnitude
 function siConvert(value) {
-	// Requre value argument
-	if (typeof value === 'undefined') {
-		return console.log("siConvert() missing 1 positional argument: 'value'");
-	}
 	// Define prefix, scale relations
 	var data = {
 		'Y': 24,
