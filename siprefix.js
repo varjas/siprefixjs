@@ -30,7 +30,9 @@ function siConvert(value) {
 		return data[value];
 	// If scale is set
 	}else if (typeof value === 'number') {
-		return Object.keys(data).find(key => data[key] === value);
+		for (var key in data) {
+			if (data[key] === value) return key;
+		}
 	}
 }
 
